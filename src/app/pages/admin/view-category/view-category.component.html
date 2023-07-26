@@ -1,0 +1,14 @@
+<mat-card>
+    <mat-list >
+        <div style="text-align: left;">All Categories</div>
+        <mat-list-item *ngFor="let c of cat " class="content">
+           <mat-icon>category</mat-icon>
+            <div><b>{{c.title}}</b></div>
+            <div>{{c.description}}</div>
+            <button class="delete_button" (click)="delete_Category(c.cid)" mat-raised-button color="primary">Delete</button>
+            <mat-divider></mat-divider>
+        </mat-list-item>
+    </mat-list>
+    <button mat-raised-button color="primary" routerLink="/admin/add-category">Add New Category</button>
+
+</mat-card>

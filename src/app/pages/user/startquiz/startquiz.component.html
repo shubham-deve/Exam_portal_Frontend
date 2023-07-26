@@ -1,0 +1,63 @@
+<div class="container" *ngIf="!isSubmited">
+<div class="leftPanel">
+
+</div>
+<div class="rightPanel">
+<ng-container>
+  <h1 class="mt10"> On Going quiz <b> {{questions[0].quiz.title}}</b></h1>
+  <mat-card *ngFor="let q of questions; let i =index " class="mt10">
+    <mat-card-content>
+     
+   <span><b>Q {{i+1}})</b></span><p class="mlft20" style="display: inline;" [innerHTML]="q.content"></p>
+    <mat-divider></mat-divider>
+    <div class="row mt10"> 
+      <span><input  type="radio" name="i" [(ngModel)]="q.qivenAnswer" [value]="q.option1">{{q.option1}}</span>
+      <span><input type="radio" name="i" [(ngModel)]="q.givenAnswer" [value]="q.option2">{{q.option2}}</span>
+    </div>
+    <div class="row mt10"> 
+      <span><input type="radio" name="i" [(ngModel)]="q.givenAnswer" [value]="q.option3">{{q.option3}}</span>
+      <span style="padding-left:445px;"><input type="radio" name="i" [(ngModel)]="q.givenAnswer" [value]="q.option4">{{q.option4}}</span>
+    </div>
+    </mat-card-content>
+
+  </mat-card>
+  <div class="btnSubmit mt10">
+    <button (click)="submitQuiz()" mat-raised-button color="primary"> Sumbit Quiz</button>
+
+  </div>
+</ng-container>
+</div>
+<div class="rightCornerPanel">
+<mat-card style="margin-top: 50px;">
+ <mat-card-header>
+  <mat-card-title>Progress</mat-card-title>
+  <mat-card-subtitle>Quiz Will automatically submit at give time <b> {{formatTimer()}}</b> </mat-card-subtitle>
+ </mat-card-header>
+ <mat-card-content>
+<mat-spinner mode="determinate"
+[value]="(timer/(this.questions.length*1*60))*100"
+ color="warn" style="margin:auto"></mat-spinner>
+ </mat-card-content>
+</mat-card>
+</div>
+</div>
+
+
+<div *ngIf="isSubmited">
+  <mat-card class="resultHeader mt10">
+    <mat-card-header>
+      <mat-card-title>Quiz Result</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="textCenter mt10"  >
+      <h1> Mark got: {{marksGot}}</h1>
+      <h1>No of Correct Answer: {{correctAnswers}}</h1>
+      <h1>No of Attempt: {{AttemptQuestions}}</h1>
+    </mat-card-content>
+    <div class="textCenter w100 mt10" >
+      <button (click)="printResult()" mat-raised-button color="primary" >Print</button>
+    </div>
+<div style="text-align: right;">
+    <button class="mt10 " routerLink="/user-dashboard/0"  mat-raised-button color="primary">DashBoard</button>
+  </div>
+  </mat-card>
+</div>

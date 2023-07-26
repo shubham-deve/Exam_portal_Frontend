@@ -1,0 +1,14 @@
+<nav class="navbar">
+    <span class="material-symbols-outlined">
+        menu_book
+        </span>
+<h1> <a routerLink="/">ExamPortal</a></h1>
+<div class="contain" *ngIf="!isLoggedIn">
+<a  routerLink="/login">Login</a>
+<a  routerLink="/register">Register</a>
+</div>
+<div class="contain" *ngIf="isLoggedIn" >
+    <a routerLink="/admin/profile"> {{ user }} </a>
+    <a (click)="logout()">Logout</a>
+    </div>
+</nav>

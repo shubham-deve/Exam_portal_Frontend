@@ -1,0 +1,29 @@
+.image{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    background-image: url(./Profile_image.jpg);
+    background-size: cover;
+}
+.table{
+    width: 100%;
+}
+table{
+    margin: auto;
+    border: 3.5px solid whitesmoke;
+    border-collapse: collapse;
+    text-align: center;
+}
+table tr,td{
+    border: 3.5px solid whitesmoke;
+    padding: 13px 100px;
+}
+.footerButton{
+    position: absolute;
+    left: 40%;
+}
+.footerButton button{
+    padding: 20px;
+    margin: 15px;
+}

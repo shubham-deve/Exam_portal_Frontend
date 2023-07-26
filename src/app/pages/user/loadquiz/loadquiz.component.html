@@ -1,0 +1,32 @@
+<div style="text-align: left; margin-top:10px">
+    <h1> Available Quizzes</h1>
+</div>
+<div class="card" >
+ <div *ngFor="let q of quizzes" class="matcat" >
+<mat-card  >
+<mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title><h1>{{q.title}}</h1></mat-card-title>
+    <mat-card-subtitle>
+        {{q.category.title}}
+    </mat-card-subtitle>
+</mat-card-header>
+<mat-card-content>
+    <p class="truncate">{{q.description}}</p>
+</mat-card-content>
+<div class="btn">
+<button mat-stroked-button color="accent" >view</button>
+<button [routerLink]="'/user-dashboard/instruction/'+q.qid"  mat-stroked-button color="primary" style="margin-left: 10px;">start</button>
+<button  mat-button color="primary">Question:{{q.noOfQuestions}}</button>
+<button  mat-button color="primary">Marks :{{q.maxMarks}}</button>
+</div>
+</mat-card>
+</div>
+<div *ngIf="quizzes.length==0">
+    <mat-card>
+        <mat-card-content>
+            <h1>No quizzes in this category</h1>
+        </mat-card-content>
+    </mat-card>
+</div>
+</div>

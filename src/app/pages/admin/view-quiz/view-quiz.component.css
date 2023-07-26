@@ -1,0 +1,27 @@
+.logo{
+    position:absolute;
+    left: 0px;
+    background: url(../../../../assets/brain.png);
+    background-size: cover;
+    border-radius: 40%;
+    border: 2px solid black;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    margin: 10px;
+}
+.content{
+    margin-left:50%;
+    width: 170px;
+}
+.conntent{
+    text-align: left;
+    padding-top: 10px;  
+    margin-top: 20px;
+}
+.question_button{
+    text-align: left;
+    margin: 10px;
+    padding: 10px;
+  
+}

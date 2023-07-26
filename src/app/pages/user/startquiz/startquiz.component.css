@@ -1,0 +1,45 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    height:90vh ;
+
+}
+.leftPanel{
+    flex: 0.7;
+    height: 100%;
+
+}
+.rightPanel{
+    flex: 3;
+    height: 100%;
+
+}
+.mt10{
+    margin-top: 10px;
+}
+.row span:first-child{
+    padding-left: 20px;
+}
+.row span:last-child{
+    padding-left: 500px;
+    
+    }
+.mlft20{
+    margin-left: 20px;
+}
+.btnSubmit{
+    text-align: center;
+}
+.textCenter{
+    text-align: center;
+}
+.resultHeader{
+    margin: auto;
+    width: 60%;
+}
+.w100{
+    width: 100%;
+}
+.rightCornerPanel{
+    flex:1;
+}

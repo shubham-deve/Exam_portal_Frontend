@@ -1,0 +1,15 @@
+
+.content{
+    text-align: left;
+    height: 110px;
+    width: 78%;
+    margin-left: 40px;
+    margin-bottom: 10px;
+    border-bottom: 3.5px solid whitesmoke;
+
+}
+.delete_button{
+    position: absolute;
+    right: 0px;
+    bottom: 20px;
+}

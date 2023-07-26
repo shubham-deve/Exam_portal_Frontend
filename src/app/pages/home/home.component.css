@@ -1,0 +1,16 @@
+.container{
+    font-size: 30px;
+    border: 2px solid green;
+    height: 100%;
+    text-align: center;
+    background-image: url("../../../assets/bgImage.jpg");
+background-repeat: no-repeat;
+background-size: 100% 100%;
+}
+.content{
+    position: absolute;
+    top: 30%;
+    left:20%;
+    line-height: 40px;
+    padding: 5px;
+}

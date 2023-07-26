@@ -1,0 +1,44 @@
+.container{
+   display: flex;
+   flex-direction: row ;
+   width: 100%;
+   margin: auto;
+   background-image: url(../../../assets/bg2.jpg);
+   background-repeat: no-repeat;
+   height: 100vh;
+   opacity:1 ;
+   background-size:cover;
+
+}
+.col-md-6{
+    margin: auto;
+    width: 50%;
+    height: 100vh;
+}
+.col-md-6 h1{
+    text-align: center;
+}
+img{
+    height: 70px;
+    width: 70px;
+    margin-left: 40%;
+    margin-top: 3%;
+}
+.input{
+    padding-left: 3%;
+    padding-right: 4%;
+}
+.full-width{
+    width: 100%;
+}
+.button{
+    margin: auto;
+    text-align: center;
+}
+
+.mauto{
+    margin: auto;
+    width: 60%;
+    border-radius: 10px;
+    opacity: 0.93;
+}

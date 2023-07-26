@@ -1,0 +1,43 @@
+<mat-card>
+    <h1>Add Quiz</h1>
+    <mat-card-content>
+        <form (ngSubmit)="addQuiz()"  >
+            <mat-form-field appearance="fill" class="form_field">
+                <mat-label>Enter Title</mat-label>
+                <input [(ngModel)]="quizData.title"  required autofocus type="text" name="title" matInput placeholder="Title of a quiz">
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" class="form_field">
+                <mat-label>Description</mat-label>
+                <textarea [(ngModel)]="quizData.description" required   name="description" id="" cols="10" rows="2" matInput placeholder="what is about a quiz "></textarea>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" class="form_field" style="width: 35%; text-align:left; margin-right:30px;" >
+                <mat-label>Max Marks</mat-label>
+                <input [(ngModel)]="quizData.maxMarks"  required autofocus type="number" name="maxMarks" matInput placeholder="Maximum marks">
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" class="form_field" style="width: 35%; text-align:right; margin-left:40px">
+                <mat-label>No of Question</mat-label>
+                <input [(ngModel)]="quizData.noOfQuestions"  required autofocus type="number" name="noOfQuestions" matInput placeholder="No Of Question">
+            </mat-form-field>
+
+            <mat-slide-toggle [(ngModel)]="quizData.active" style="display: block; text-align:left; margin-left:10%"
+          class="example-margin"  name="active"        >
+       Publish Status
+      </mat-slide-toggle>
+        
+            <mat-form-field appearance="fill" style=" display:block; margin-left:10%;text-align:left; margin-top:20px" >
+                <mat-label>categories</mat-label>
+                <mat-select name="category" [(ngModel)]="quizData.category.cid">
+                  <mat-option *ngFor="let c of categories" [value]="c.cid">
+                    {{c.title}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+              <div class="add_button">
+                <button type="submit" mat-raised-button color="accent">Add</button>
+            </div>
+        </form>
+    </mat-card-content>
+</mat-card>

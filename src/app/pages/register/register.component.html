@@ -1,0 +1,67 @@
+<div class="container">
+  <mat-card class="mauto">
+    <div class="col-md-6">
+        <img src="../../../assets/logo.png" alt="">
+        <h1>Register here!!</h1>
+        
+    <form (ngSubmit)="formSubmit()">
+        <p class="input">
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>username</mat-label>
+              <input type="text"
+              required
+              [(ngModel)]="user.userName"
+              name="userName"
+              matInput placeholder="Placeholder">
+              <mat-hint>username should be unique</mat-hint>
+            </mat-form-field>
+          </p>
+          <p class="input">
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>password</mat-label>
+              <input type="password"
+              required
+              [(ngModel)]="user.password"
+              name="password"
+              matInput placeholder="Placeholder">
+              <mat-hint>password should be strong </mat-hint>
+            </mat-form-field>
+          </p>
+          <p class="input">
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Full Name</mat-label>
+              <input 
+              required
+              [(ngModel)]="user.fullName"
+              name="fullName"
+              matInput placeholder="Placeholder">
+            </mat-form-field>
+          </p>
+          <p class="input">
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Email</mat-label>
+              <input
+              required
+              [(ngModel)]="user.email"
+              name="email"
+              matInput placeholder="Placeholder">
+            </mat-form-field>
+          </p>
+          <p class="input">
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>contact No</mat-label>
+              <input 
+              required
+              [(ngModel)]="user.phone"
+              name="phone"
+              type="number" matInput placeholder="Placeholder">
+            </mat-form-field>
+            <div class="button">
+              <button type="submit" mat-raised-button color="primary">Register</button>&nbsp;&nbsp;&nbsp;
+              <button type="reset" mat-raised-button color="white">Reset</button>
+            </div>
+         
+    </form>
+    </div>
+  </mat-card>
+</div>

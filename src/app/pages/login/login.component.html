@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="pic">
+
+    </div>
+    <mat-card class="card">
+    <div class="login">
+        <h1>Login</h1>
+        <form (ngSubmit)="formSubmit(loginData)">
+            <p>
+                <mat-form-field class="input" appearance="outline">
+                  <mat-label>Username</mat-label>
+                  <input
+                  name="username"
+                  [(ngModel)]="loginData.username"
+                  matInput placeholder="Enter Username">
+                </mat-form-field>
+              </p>
+              <p>
+                <mat-form-field class="input"  appearance="outline">
+                  <mat-label>Password</mat-label>
+                  <input 
+                  type="password"
+                  name="password"
+                  [(ngModel)]="loginData.password"
+                  matInput placeholder="enter Password">
+                </mat-form-field>
+              </p>
+              <div class="btn-container">
+                <button mat-raised-button color="primary">login</button>
+              </div>
+        </form>
+        <p class="footer">Don't have a account ? &nbsp;&nbsp;<button mat-raised-button color="accent"> <a  routerLink="/register">signup</a></button></p>
+    </div>
+  </mat-card>
+</div>
